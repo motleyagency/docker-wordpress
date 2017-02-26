@@ -3,12 +3,16 @@
 Creates a "minimalistic" dockerized Wordpress with Alpine Linux, Nginx, PHP 7 and MariaDB.
 
 ## Usage
-```docker-compose up -d```
 
-You might want to prefix container names with project name
+You might want to prefix the following container names with project name before building.
 - wordpress_nginx
 - wordpress_php
 - wordpress_mariadb
+
+Build service:
+```
+docker-compose up -d
+```
 
 ## Wordpress
 
