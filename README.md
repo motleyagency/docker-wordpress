@@ -16,7 +16,7 @@ docker-compose up -d
 
 ## Wordpress
 
-Automatically downloads the Wordpress package and extracts it to **html** folder. However if you are setting up an environment for existing project you can replace the contents with your projects' files.
+Automatically downloads the Wordpress package and extracts it to **html** folder. However if you are setting up an environment for existing project you can replace the contents with your project's files.
 
 ### Wordpress specific defaults
 
@@ -31,7 +31,7 @@ You might want to change these.
 
 Database is stored locally inside the data/mariadb folder in your project root.
 
-You can access the database for example with Sequel Pro with following settings. Passwords only work if you haven't changed the defaults.
+You can access the database for example with Sequel Pro with following settings (default passwords).
 
 - Host = 127.0.0.1
 - Username = root
