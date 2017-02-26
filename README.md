@@ -45,6 +45,9 @@ This Docker compose file is based on a work by evild and uses his images. Some c
 https://github.com/Evild67/docker-compose-wordpress
 
 https://hub.docker.com/r/evild/alpine-nginx/
+
 https://hub.docker.com/r/turanturan/alpine-wordpress/
+
 https://hub.docker.com/r/evild/alpine-php/
+
 https://hub.docker.com/r/evild/alpine-base/
