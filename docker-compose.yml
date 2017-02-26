@@ -1,0 +1,45 @@
+version: '2'
+services:
+  nginx:
+    image: evild/alpine-nginx:1.11.2-libressl
+    container_name: wordpress_nginx
+    restart: always
+    volumes:
+      - ./html/:/var/www/html/:ro
+      - ./nginx/conf/nginx.conf:/etc/nginx/conf/nginx.conf:ro
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+    ports:
+      - 8080:80
+      - 443:443
+    networks:
+      - front
+  php:
+    image: turanturan/alpine-wordpress:4.7.2
+    container_name: wordpress_php
+    restart: always
+    volumes:
+      - ./html:/var/www/html
+      - ./php/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+    environment:
+      - WORDPRESS_DB_NAME=wpdb
+      - WORDPRESS_TABLE_PREFIX=wp_
+      - WORDPRESS_DB_HOST=db
+      - WORDPRESS_DB_PASSWORD=root
+    networks:
+      - front
+      - back
+  db:
+    image: mariadb:10
+    container_name: wordpress_mariadb
+    restart: always
+    volumes:
+      - ./data/mariadb:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    networks:
+      - back
+    ports:
+      - 3306:3306
+networks:
+  front:
+  back:
