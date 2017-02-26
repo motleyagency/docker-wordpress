@@ -43,3 +43,8 @@ You can access the database for example with Sequel Pro with following settings 
 This Docker compose file is based on a work by evild and uses his images. Some changes are made, most notably this uses separate Wordpress/PHP image with currently latest Wordpress 4.7.2
 
 https://github.com/Evild67/docker-compose-wordpress
+
+https://hub.docker.com/r/evild/alpine-nginx/
+https://hub.docker.com/r/turanturan/alpine-wordpress/
+https://hub.docker.com/r/evild/alpine-php/
+https://hub.docker.com/r/evild/alpine-base/
