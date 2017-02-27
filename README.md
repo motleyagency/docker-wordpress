@@ -38,6 +38,15 @@ You can access the database for example with Sequel Pro with following settings 
 - Password = root
 - Port = 3306
 
+## SSL
+
+If you need SSL certificates follow the next steps:
+- rename nginx/conf.d/default_SSL.conf to default.conf
+- open Keychain, select System from sidebar and drag'n'drop the localhost.crt from **certs** folder to Keychain
+- Double click the localhost.crt in Keychain and then select **Always Trust** from the first dropdown labeled "When using this certificate:". This will affect all dropdowns, which is what we are after.
+
+Then just docker-compose down and docker-compose up -t and you're good to go.
+
 ## More info
 
 This Docker compose file is based on a work by evild and uses his images. Some changes are made, most notably this uses separate Wordpress/PHP image with currently latest Wordpress 4.7.2
