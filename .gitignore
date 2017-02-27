@@ -1,2 +1,5 @@
 html
 data
+certs/localhost.key
+certs/localhost.crt
+.DS_Store

@@ -5,6 +5,7 @@ services:
     container_name: wordpress_nginx
     restart: always
     volumes:
+      - ./certs/:/etc/nginx/certs:ro
       - ./html/:/var/www/html/:ro
       - ./nginx/conf/nginx.conf:/etc/nginx/conf/nginx.conf:ro
       - ./nginx/conf.d:/etc/nginx/conf.d:ro
