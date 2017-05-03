@@ -57,6 +57,10 @@ docker-compose up
 
 The non-SSL app will run on port 8080. If you use SSL, the port will be 443.
 
+## WordPress configuration
+
+After completing the WordPress installation (boot container and navigate to `http://localhost:8080`), change the permalink setting in the [WP Admin interface](http://localhost:8080/wp-admin/options-permalink.php) to **Post name**. This will make the posts available at pretty URLs and also enable the default URL to the [REST API](http://localhost:8080/wp-json).
+
 ## More info
 
 This Docker compose file is based on a work by evild and uses his images. Some changes are made, most notably this uses separate Wordpress/PHP image with currently latest Wordpress 4.7.2
